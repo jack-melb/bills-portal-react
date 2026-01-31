@@ -9,7 +9,7 @@ function App() {
     const testConnection = async () => {
       try {
         // Try to get session - this tests if Supabase is reachable
-        const { data, error } = await supabase.auth.getSession()
+        const { error } = await supabase.auth.getSession()
         if (!error) {
           setConnected(true)
         } else {
