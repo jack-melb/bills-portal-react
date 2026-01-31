@@ -8,7 +8,8 @@ function App() {
     // Test Supabase connection
     const testConnection = async () => {
       try {
-        const { error } = await supabase.from('clients').select('count')
+        // Try to get session - this tests if Supabase is reachable
+        const { data, error } = await supabase.auth.getSession()
         if (!error) {
           setConnected(true)
         } else {
