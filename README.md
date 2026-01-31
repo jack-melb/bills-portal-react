@@ -71,3 +71,4 @@ export default defineConfig([
   },
 ])
 ```
+# Supabase env vars added
