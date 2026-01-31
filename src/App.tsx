@@ -8,7 +8,7 @@ function App() {
     // Test Supabase connection
     const testConnection = async () => {
       try {
-        const { data, error } = await supabase.from('clients').select('count')
+        const { error } = await supabase.from('clients').select('count')
         if (!error) {
           setConnected(true)
         } else {
